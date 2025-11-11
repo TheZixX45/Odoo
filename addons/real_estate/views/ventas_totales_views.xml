@@ -1,0 +1,34 @@
+<odoo>
+    <!-- Vista tipo lista -->
+    <record id="real_estate.view_ventas_totales_tree" model="ir.ui.view">
+        <field name="name">ventas.totales.tree</field>
+        <field name="model">ventas.totales</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="valor"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo formulario -->
+    <record id="real_estate.view_ventas_totales_form" model="ir.ui.view">
+        <field name="name">ventas.totales.form</field>
+        <field name="model">ventas.totales</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="valor"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción -->
+    <record id="real_estate.action_ventas_totales" model="ir.actions.act_window">
+        <field name="name">Ventas Totales</field>
+        <field name="res_model">ventas.totales</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
