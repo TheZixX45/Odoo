@@ -1,9 +1,14 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <menuitem id="real_estate_menu_root" name="Real Estate asdasd">
-        <menuitem id="real_estate_menu_main" name="Main Menu prueba">
-            <menuitem id="estate_property_menu_action" action="real_estate.estate_property_action"/>
-        </menuitem>
-    </menuitem>
+    <!-- Menú raíz para Real Estate -->
+    <menuitem id="real_estate_menu_root" name="Menú de Real Estate"/>
+
+    <!-- Submenú principal -->
+    <menuitem id="real_estate_menu_main" name="Propiedades" parent="real_estate_menu_root"/>
+    <menuitem id="estate_property_menu_action" name="Listado de Propiedades" parent="real_estate_menu_main" action="real_estate.estate_property_action"/>
+
+    <!-- Menú raíz para Ventas -->
+    <menuitem id="ventas_menu_root" name="Menú de Ventas"/>
+    <menuitem id="ventas_menu_main" name="Ventas Totales" parent="ventas_menu_root"/>
+    <menuitem id="ventas_menu_action" name="Registros de Ventas" parent="ventas_menu_main" action="real_estate.action_ventas_totales"/>
 </odoo>
