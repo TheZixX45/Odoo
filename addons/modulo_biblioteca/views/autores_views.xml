@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista LISTA de Autores -->
+    <record id="view_autores_tree" model="ir.ui.view">
+        <field name="name">biblioteca.autor.tree</field>
+        <field name="model">biblioteca.autor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="nacionalidad"/>
+                <field name="total_libros"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista FORMULARIO de Autores -->
+    <record id="view_autores_form" model="ir.ui.view">
+        <field name="name">biblioteca.autor.form</field>
+        <field name="model">biblioteca.autor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="nacionalidad"/>
+                            <field name="fecha_nacimiento"/>
+                        </group>
+                        <group>
+                            <field name="total_libros" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="biografia" nolabel="1"/>
+                    
+                    <!-- ★★ SECCIÓN QUE MUESTRA LOS LIBROS DEL AUTOR ★★ -->
+                    <field name="libro_ids" nolabel="1">
+                        <tree>
+                            <field name="name"/>
+                            <field name="fecha_publicacion"/>
+                            <field name="paginas"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

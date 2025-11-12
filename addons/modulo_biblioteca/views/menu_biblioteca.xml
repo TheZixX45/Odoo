@@ -1,0 +1,20 @@
+<odoo>
+    <!-- Menú y Acciones -->
+    <record id="action_autores" model="ir.actions.act_window">
+        <field name="name">Autores</field>
+        <field name="res_model">biblioteca.autor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_biblioteca" name="Mi Biblioteca"/>
+    <menuitem id="menu_autores" name="Autores" parent="menu_biblioteca" action="action_autores"/>
+
+        <!-- Menú y Acciones -->
+    <record id="action_libros" model="ir.actions.act_window">
+        <field name="name">Libros</field>
+        <field name="res_model">biblioteca.libro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_libros" name="Libros" parent="menu_biblioteca" action="action_libros"/>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista LISTA de Libros -->
+    <record id="view_libros_tree" model="ir.ui.view">
+        <field name="name">biblioteca.libro.tree</field>
+        <field name="model">biblioteca.libro</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="autor_id"/>
+                <field name="fecha_publicacion"/>
+                <field name="precio"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista FORMULARIO de Libros -->
+    <record id="view_libros_form" model="ir.ui.view">
+        <field name="name">biblioteca.libro.form</field>
+        <field name="model">biblioteca.libro</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="isbn"/>
+                            <field name="autor_id"/>
+                            <!-- ★★ Campo que viene del autor ★★ -->
+                            <field name="nacionalidad_autor"/>
+                        </group>
+                        <group>
+                            <field name="fecha_publicacion"/>
+                            <field name="paginas"/>
+                            <field name="precio"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
