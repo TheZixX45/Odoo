@@ -12,7 +12,6 @@
             </tree>
         </field>
     </record>
-
     <!-- Vista FORMULARIO de Autores -->
     <record id="view_autores_form" model="ir.ui.view">
         <field name="name">biblioteca.autor.form</field>
@@ -44,6 +43,4 @@
             </form>
         </field>
     </record>
-
-
 </odoo>
